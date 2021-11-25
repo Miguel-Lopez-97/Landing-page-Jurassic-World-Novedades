@@ -73,12 +73,22 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                 .slider_images ul{
                     display: flex;  flex-direction: column;
                     width: 100%;
-                    margin: 1%;
+                    padding: 0;
                     animation: image_changes 20s infinite alternate;}
+
                 .slider_images ul li{
                     list-style: none;}
-                .slider_images img{
-                    max-height: 90%;    max-width: 90%;}
+                .slider_images img{ height: 49vh;}
+
+                @keyframes image_changes {
+                    0% {margin-top: 0;}
+                    20% {margin-top: 0;}
+                    25% {margin-top: -50vh;}
+                    45% {margin-top: -50vh;}
+                    50% {margin-top: -100vh;}
+                    70% {margin-top: -100vh;}
+                    75% {margin-top: -150vh;}
+                    100% {margin-top: -150vh;}}
 
             .slider_comunidad{
                         display: flex; flex-direction: row;
