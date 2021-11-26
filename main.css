@@ -10,8 +10,9 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
 
 @media screen and (min-width: 780px){
 
-    h1, h2, h3, li {font-size: 5vh;}
-    h4, p {font-size: 2.2vh;}  
+    li{font-size: 2.5vw;}
+    h1, h2, h3{font-size: 3vh;}
+    h4, p {font-size: 1.7vw;}  
     
     #contenedor{    width: 95%;     margin: auto;}
 
@@ -100,23 +101,142 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                 display: flex;  flex-direction: column;
                 justify-content: center; align-items: space-around;
                 background-color: rgba(255,255,255,0.3);
-                width: 40%;
+                width: 50%;
                 padding: 2%;}
 
         .articulo_imagen{
                 display: flex;  flex-direction: column-reverse;
                 align-items: center;    justify-content: center;
                 background-color: black;
-                width: 60%;}
+                width: 50%;}
 
                 #articulo_4 .articulo_imagen{
                 flex-direction: row-reverse;    flex-wrap: wrap;}
 
                 .articulo_imagen img{
                    height: 90%;     max-width: 80%;}
-                #imagen_velociraptor {height: 80%;}
-                #imagen_spino {height: 80%;}
-                #imagen_t-rex {height: 80%;}
+                #imagen_velociraptor {height: 80%; max-width: 32%;}
+                #imagen_spino {height: 80%; max-width: 32%;}
+                #imagen_t-rex {height: 80%; max-width: 32%;}
+    
+    footer{
+        display: flex;  flex-direction: row;
+        justify-content: space-around;  align-items: center;
+        background-color: #902129;
+        width: 100%;}
+
+        footer img{ width: 15%; max-width: 80px;}
+}
+@media screen and (min-width: 480px) and (max-width:780px){
+    li{font-size: 2.7vw;}
+    h1, h2, h3 {font-size: 4vh;}
+    h4, p {font-size: 1.6vw;}  
+    
+    #contenedor{    width: 95%;     margin: auto;}
+
+    header{
+        display: flex;  flex-direction: column;
+        width: 100%;}
+
+        .header-baner{
+            display: flex;  flex-direction: row;
+            align-items: center;    justify-content: space-around;
+            background-color: rgb(24, 29, 33);
+            height: 30vh;   width: 100%;}
+
+            #logo_principal{    height: 100%;   opacity: 0.8;}
+            #logo_camp{    display:none;}
+            #logo_evolution{  display:none;}
+        
+        .cont-menu{
+            display: flex;  flex-direction: row;
+            align-items: center;    justify-content: center;
+            height: 10vh;   width: 100%;
+            background-color: #902129;}
+
+            .bar-btn {  display: none;}
+            #botton_check{    display: none;}
+            .cont-men-nav{
+                display: flex;  flex-direction: row;
+                justify-content: center;
+                width: 100%;}
+            .cont-men-nav ul{
+                list-style-type: none;  text-align: center; 
+                margin: 2vw;}
+            .cont-men-nav ul li{
+                display: inline;
+                padding: 1vw 1vw;
+                max-width: 20vw;}
+
+    section{
+        display: flex;  flex-direction: column;
+        background-color: white;
+        width: 100%;}
+
+        article{
+        display: flex;  flex-direction: row-reverse;
+        width: 100%; height: 48vh;
+        background-image: url(images/Fondo.jpg);
+        margin-top: 1vh;    margin-bottom: 1vh;}
+        
+        .slider{
+            display: flex;  flex-direction: row;
+            justify-content: center; align-items: center;
+            height: 50vh;}
+
+            .slider_images{
+                display: flex; flex-direction: row;
+                width: 50%; height: 50vh;
+                background-color: black;
+                overflow: hidden;}
+
+                .slider_images ul{
+                    display: flex;  flex-direction: column;
+                    width: 100%;
+                    padding: 0;
+                    animation: image_changes 20s infinite alternate;}
+
+                .slider_images ul li{
+                    list-style: none;}
+                .slider_images img{ height: 49.5vh; max-width: 45vw;}
+
+                @keyframes image_changes {
+                    0% {margin-top: 0;}
+                    20% {margin-top: 0;}
+                    25% {margin-top: -50vh;}
+                    45% {margin-top: -50vh;}
+                    50% {margin-top: -100vh;}
+                    70% {margin-top: -100vh;}
+                    75% {margin-top: -150vh;}
+                    100% {margin-top: -150vh;}}
+
+            .slider_comunidad{
+                        display: flex; flex-direction: row;
+                        justify-content: center;
+                        width: 50%; height: 50vh;
+                        background-color: blueviolet;}
+
+        .articulo_cuerpo{
+                display: flex;  flex-direction: column;
+                justify-content: center; align-items: space-around;
+                background-color: rgba(255,255,255,0.3);
+                width: 50%;
+                padding: 2%;}
+
+        .articulo_imagen{
+                display: flex;  flex-direction: column-reverse;
+                align-items: center;    justify-content: center;
+                background-color: black;
+                width: 50%;}
+
+                #articulo_4 .articulo_imagen{
+                flex-direction: row-reverse;    flex-wrap: wrap;}
+
+                .articulo_imagen img{
+                   height: 90%;     max-width: 80%;}
+                #imagen_velociraptor {display: none;}
+                #imagen_spino {width: 45%;}
+                #imagen_t-rex {width: 45%;}
     
     footer{
         display: flex;  flex-direction: row;
