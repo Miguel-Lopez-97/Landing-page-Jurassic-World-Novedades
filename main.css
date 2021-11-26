@@ -12,7 +12,7 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
 
     li{font-size: 2.5vw;}
     h1, h2, h3{font-size: max(2vw,20px);}
-    h4, p {font-size: max(14px,1.5vw); }  
+    h4, p {font-size: max(14px,1.5vw); margin-top: 2vh; }  
     
     #contenedor{    width: 95%;     margin: auto;}
 
@@ -99,7 +99,7 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
 
         .articulo_cuerpo{
                 display: flex;  flex-direction: column;
-                justify-content: center; align-items: space-around;
+                justify-content: flex-start; align-items: center;
                 background-color: rgba(255,255,255,0.3);
                 width: 50%;
                 padding: 2%;
