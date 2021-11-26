@@ -186,7 +186,7 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
 
             .slider_images{
                 display: flex; flex-direction: row;
-                width: 50%; height: 50vh;
+                width: 48%; height: 50vh;
                 background-color: black;
                 overflow: hidden;}
 
@@ -213,15 +213,16 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
             .slider_comunidad{
                         display: flex; flex-direction: row;
                         justify-content: center;
-                        width: 50%; height: 50vh;
+                        width: 48%; height: 50vh;
                         background-color: blueviolet;}
 
         .articulo_cuerpo{
                 display: flex;  flex-direction: column;
-                justify-content: center; align-items: space-around;
+                justify-content: flex-start; align-items: center;
                 background-color: rgba(255,255,255,0.3);
                 width: 50%;
-                padding: 2%;}
+                padding: 2%;
+                overflow: auto;}
 
         .articulo_imagen{
                 display: flex;  flex-direction: column-reverse;
@@ -237,6 +238,144 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                 #imagen_velociraptor {display: none;}
                 #imagen_spino {width: 45%;}
                 #imagen_t-rex {width: 45%;}
+    
+    footer{
+        display: flex;  flex-direction: row;
+        justify-content: space-around;  align-items: center;
+        background-color: #902129;
+        width: 100%;}
+
+        footer img{ width: 15%; max-width: 80px;}
+}
+@media screen and (max-width:480px){
+    h1, h2, h3, li {font-size: 4vh;}
+    h4, p {font-size: 2.3vh;}  
+    
+    #contenedor{    width: 95%;     margin: auto;}
+
+    header{
+        display: flex;  flex-direction: column;
+        width: 100%;}
+
+        .header-baner{
+            display: flex;  flex-direction: row;
+            align-items: center;    justify-content: space-around;
+            background-color: rgb(24, 29, 33);
+            height: 20vh;   width: 100%;}
+
+            #logo_principal{    height: 100%;   opacity: 0.8;}
+            #logo_camp{    display:none;}
+            #logo_evolution{  display:none;}
+        
+        .cont-menu{
+            display: flex;  flex-direction: row;
+            align-items: center;    justify-content: center;
+            height: 100%;   width: 100%;
+            background-color: #902129;}
+
+            .cont-men-nav li a.active, .cont-men-nav li a:hover{
+                color: rgb(236, 168, 168);transition: .2s;}
+            
+            .bar-btn {  font-size: 15px;  color: white;
+                        cursor:pointer;
+                        margin: 0.5%;   margin-left: 3%;}
+
+            #check{  display: none;     margin: 0.5%;   margin-left: 3%;}
+            .cont-men-nav{
+                display: flex;  flex-direction: column;
+                justify-content: center;
+                width: 100%;    height: 0;
+                background-color: #902129;}
+            .cont-men-nav ul{
+                list-style-type: none;
+                display: block;
+                line-height: 70%;
+                margin: 5% 0;
+                transition: all 0.5s;
+                text-align: center;}
+
+            .cont-men-nav ul li{
+                display: block;
+                padding: 1vw 1vw;
+                height: 100%;}
+            #check:checked ~ .cont-men-nav {height: 100%;}
+            #check:checked ~ .cont-men-nav li{display: block;}
+            .cont-men-nav a:any-link ~ .cont-men-nav {height: 0%;}
+
+    section{
+        display: flex;  flex-direction: column;
+        background-color: white;
+        width: 100%;}
+
+        article{
+        display: flex;  flex-direction: column;
+        width: 100%; height: 100vh;
+        background-image: url(images/Fondo.jpg);
+        margin-top: 1vh;    margin-bottom: 1vh;}
+        
+        .slider{
+            display: flex;  flex-direction: column;
+            justify-content: center; align-items: center;
+            height: 100vh;}
+
+            .slider_images{
+                display: flex; flex-direction: column;
+                width: 100%; height: 40vh;
+                background-color: black;
+                overflow: hidden;}
+
+                .slider_images ul{
+                    display: flex;  flex-direction: column;
+                    width: 100%;
+                    padding: 0;
+                    animation: image_changes 20s infinite alternate;}
+
+                .slider_images ul li{
+                    list-style: none;}
+                .slider_images img{ height: 39.5vh; max-width: 90vw;}
+
+                @keyframes image_changes {
+                    0% {margin-top: 0;}
+                    20% {margin-top: 0;}
+                    25% {margin-top: -40vh;}
+                    45% {margin-top: -40vh;}
+                    50% {margin-top: -80vh;}
+                    70% {margin-top: -80vh;}
+                    75% {margin-top: -120vh;}
+                    100% {margin-top: -120vh;}}
+
+            .slider_comunidad{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%; height: 50vh;
+                        background-color: blueviolet;}
+        
+        .articulo{
+            display: flex; flex-direction: column-reverse;
+            width: 100%;}
+            .articulo_cuerpo{
+                    display: flex;  flex-direction: column;
+                    justify-content: center; align-items: center;
+                    background-color: rgba(255,255,255,0.3);
+                    width: 100%; height: 60vh;
+                    padding: 2%;
+                    overflow: auto;}
+
+            .articulo_imagen{
+                    display: flex;  flex-direction: column-reverse;
+                    align-items: center;    justify-content: center;
+                    background-color: black;
+                    width: 100%; height: 40vh;}
+
+                    #articulo_4 .articulo_imagen{
+                    flex-direction: row-reverse;    flex-wrap: wrap;}
+
+                    .articulo_imagen img{
+                    height: 90%;     max-width: 80%;}
+                    #imagen_velociraptor {display: none;}
+                    #imagen_spino {width: 45%;}
+                    #imagen_t-rex {width: 45%;}
     
     footer{
         display: flex;  flex-direction: row;
