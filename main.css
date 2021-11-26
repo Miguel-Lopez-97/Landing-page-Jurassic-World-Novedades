@@ -37,7 +37,7 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
             background-color: #902129;}
 
             .bar-btn {  display: none;}
-            #botton_check{    display: none;}
+            #check{    display: none;}
             .cont-men-nav{
                 display: flex;  flex-direction: row;
                 justify-content: center;
@@ -156,7 +156,7 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
             background-color: #902129;}
 
             .bar-btn {  display: none;}
-            #botton_check{    display: none;}
+            #check{    display: none;}
             .cont-men-nav{
                 display: flex;  flex-direction: row;
                 justify-content: center;
