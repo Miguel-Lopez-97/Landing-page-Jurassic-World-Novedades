@@ -186,7 +186,7 @@ footer{
         #logo_evolution{  display:none;}
 
         .cont-men-nav{flex-direction: row;}
-        
+
             .cont-men-nav ul li{
                 padding: 1vw 1vw;
                 max-width: 20vw;}
@@ -224,6 +224,7 @@ footer{
         .articulo_cuerpo{   width: 60%;}
 
         .articulo_imagen{   width: 40%;}}
+        #imagen_velociraptor {display: none;}
 
 @media screen and (max-width:480px){
     li{font-size: 4hw;}
