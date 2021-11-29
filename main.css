@@ -4,71 +4,58 @@
 
 body{    font-family: 'Roboto', sans-serif;     background-color: #000000;    margin: 1% 1%;}
 
-h1,h2,h3,h4,li,a{  
-    color: #ffffff;    text-shadow: 2px 2px 4px #000000;    text-decoration: none;  text-align: center;}
-p{  color: #17171A;    text-align: justify;     padding: 3%;}    
+h1,h2,h3,h4,li,a{   color: #ffffff;    text-shadow: 2px 2px 4px #000000;    text-decoration: none;  text-align: center;}
+p{                  color: #17171A;    text-align: justify;     padding: 3%;}  
 
-@media screen and (min-width: 780px){
+#contenedor{    width: 95%;     margin: auto;}
 
-    li{font-size: 2.5vw;}
-    h1, h2, h3,a{font-size: max(2vw,20px);}
-    h4, p {font-size: max(14px,1.5vw,3vh); margin-top: 2vh; }  
-    
-    #contenedor{    width: 95%;     margin: auto;}
+header{
+    display: flex;  flex-direction: column;
+    width: 100%;}
 
-    header{
-        display: flex;  flex-direction: column;
-        width: 100%;}
+    .header-baner{
+        display: flex;  flex-direction: row;
+        align-items: center;    justify-content: space-around;
+        background-color: rgb(24, 29, 33);
+        overflow: hidden;}
 
-        .header-baner{
-            display: flex;  flex-direction: row;
-            align-items: center;    justify-content: space-around;
-            background-color: rgb(24, 29, 33);
-            height: 35vh;   width: 100%;}
+        #logo_principal{    height: 100%;   opacity: 0.8;}
 
-            #logo_principal{    height: 100%;   opacity: 0.8;}
-            #logo_camp{    height: 60%;}
-            #logo_evolution{  height: 60%;}
-        
-        .cont-menu{
+        .cont-menu{     
             display: flex;  flex-direction: row;
             align-items: center;    justify-content: center;
-            height: 10vh;   width: 100%;
-            background-color: #902129;}
+            background-color: #902129;
+            width: 100%;}
 
-            .bar-btn {  display: none;}
-            #check{    display: none;}
             .cont-men-nav{
-                display: flex;  flex-direction: row;
-                justify-content: center;
-                width: 100%;}
+            display: flex; flex-direction: row;
+            justify-content: center;
+            width: 100%;}
+
             .cont-men-nav ul{
                 list-style-type: none;  text-align: center; 
                 margin: 2vw;}
+
             .cont-men-nav ul li{
-                display: inline;
-                padding: 1vw 1vw;
-                max-width: 20vw;}
+                display: inline;}
 
-    section{
-        display: flex;  flex-direction: column;
-        background-color: white;
-        width: 100%;}
+section{
+    display: flex;  flex-direction: column;
+    background-color: rgb(202, 202, 202);
+    width: 100%;}
 
-        article{
-        display: flex;  flex-direction: row;
-        width: 100%; height: 90vh;
+    article{
+        display: flex;  
+        width: 100%; 
         background-image: url(images/Fondo.jpg);
-        margin-top: 2vh;    margin-bottom: 2vh;}
-        
+        margin-top: 1vh;    margin-bottom: 1vh;}
+
         .slider{
             display: flex;  flex-direction: row;
-            justify-content: center; align-items: center;
-            height: 70vh;}
-
+            justify-content: center; align-items: center;}
+            
             .slider_images{
                 display: flex; flex-direction: row;
-                width: 60%; height: 70vh;
                 background-color: black;
                 overflow: hidden;}
 
@@ -76,10 +63,90 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                     display: flex;  flex-direction: column;
                     width: 100%;
                     padding: 0;
-                    animation: image_changes 20s infinite alternate;}
+                    animation: image_changes 15s infinite alternate;}
 
                 .slider_images ul li{
                     list-style: none;}
+
+            .slider_comunidad{
+                display: flex; 
+                justify-content: center;
+                background-color: rgb(177, 55, 55);
+                overflow: auto}
+
+                .slider_comunidad ul{
+                    display: flex;  flex-direction: column;
+                    padding: 0;}
+                
+                .slider_comunidad ul li{
+                        list-style: none;   width: 100%;}
+
+                .slider_comunidad ul li iframe{                
+                    width: 90%;
+                    margin-top: 5%; margin-left: 5%;}
+
+        .articulo_cuerpo{
+            display: flex;  flex-direction: column;
+            justify-content: flex-start; align-items: center;
+            background-color: rgba(255,255,255,0.3);
+            padding: 2%;
+            overflow: auto;}
+        
+        .articulo_imagen{
+            display: flex;  flex-direction: column-reverse;
+            align-items: center;    justify-content: center;
+            background-color: black;}
+
+        .articulo_imagen a{height: 90%;}
+
+            #articulo_4 .articulo_imagen{   flex-direction: row-reverse;    flex-wrap: wrap;}
+            
+            .articulo_imagen img{   height: 90%;     max-width: 80%;}
+            
+            #imagen_spino {width: 45%;}
+            
+            #imagen_t-rex {width: 45%;}
+
+footer{
+    display: flex;  flex-direction: row;
+    justify-content: space-around;  align-items: center;
+    background-color: #902129;
+    width: 100%;}
+    footer a{ height: 100%;}
+    footer a img{ width: 10vh; max-width: 15vw;}
+            
+@media screen and (min-width: 780px){
+
+    li{font-size: 2.5vw;}
+    h1, h2, h3,a{font-size: max(2vw,20px);}
+    h4, p {font-size: max(14px,1.5vw,3vh); margin-top: 2vh; }  
+    
+        .header-baner{  height: 35vh;   width: 100%;}
+
+        .cont-menu{height: 10vh;}
+
+        #logo_camp{    height: 60%;}
+        #logo_evolution{  height: 60%;}
+        .bar-btn {  display: none;}
+        #check{    display: none;}
+
+        .cont-men-nav{flex-direction: row;}
+
+            .cont-men-nav ul li{
+                padding: 1vw 1vw;
+                max-width: 20vw;}
+
+        article{
+        display: flex;  flex-direction: row;
+        height: 90vh;
+        margin-top: 2vh;    margin-bottom: 2vh;}
+        
+        .slider{    height: 70vh;}
+
+            .slider_images{
+                width: 60%; height: 70vh;
+                }
+
                 .slider_images img{ height: 69vh;}
 
                 @keyframes image_changes {
@@ -92,127 +159,50 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                     75% {margin-top: -210vh;}
                     100% {margin-top: -210vh;}}
 
-            .slider_comunidad{
-                        display: flex; flex-direction: column;
-                        justify-content: center;
-                        width: 40%; height: 70vh;
-                        background-color: rgb(177, 55, 55);
-                        overflow: auto}
+            .slider_comunidad{  width: 40%; height: 70vh;}
 
-                        .slider_comunidad ul{
-                            display: flex;  flex-direction: column;
-                            height: 70vh;
-                            padding: 0;}
+                        .slider_comunidad ul{   height: 70vh;}
                         
-                        .slider_images ul li{
-                                list-style: none;   width: 100%;}
-                        .slider_comunidad ul li iframe{ 
-                            height: 65vh; width: 90%;
-                            margin-top: 5%; margin-left: 5%;}
+                        .slider_comunidad ul li iframe{ height: 65vh;}
 
-        .articulo_cuerpo{
-                display: flex;  flex-direction: column;
-                justify-content: flex-start; align-items: center;
-                background-color: rgba(255,255,255,0.3);
-                width: 50%;
-                padding: 2%;
-                overflow: auto;}
+        .articulo_cuerpo{   width: 50%;}
 
-        .articulo_imagen{
-                display: flex;  flex-direction: column-reverse;
-                align-items: center;    justify-content: center;
-                background-color: black;
-                width: 50%;}
-        .articulo_imagen a{height: 90%;}
+        .articulo_imagen{   width: 50%;}
 
-                #articulo_4 .articulo_imagen{
-                flex-direction: row-reverse;    flex-wrap: wrap;}
-
-                .articulo_imagen img{
-                   height: 90%;     max-width: 80%;}
                 #imagen_velociraptor {height: 80%; max-width: 32%;}
                 #imagen_spino {height: 80%; max-width: 32%;}
                 #imagen_t-rex {height: 80%; max-width: 32%;}
-    
-    footer{
-        display: flex;  flex-direction: row;
-        justify-content: space-around;  align-items: center;
-        background-color: #902129;
-        width: 100%;}
-        footer a{ height: 100%;}
-        footer a img{ width: 10vh; max-width: 15vw;}
 }
 @media screen and (min-width: 480px) and (max-width:780px){
     li{font-size: 2.7vw;}
     h1, h2, h3 {font-size: max(4vh,16px);}
     h4, p {font-size: max(1.6vw,12px);}  
     
-    #contenedor{    width: 95%;     margin: auto;}
-
-    header{
-        display: flex;  flex-direction: column;
-        width: 100%;}
-
-        .header-baner{
-            display: flex;  flex-direction: row;
-            align-items: center;    justify-content: space-around;
-            background-color: rgb(24, 29, 33);
-            height: 30vh;   width: 100%;}
-
-            #logo_principal{    height: 100%;   opacity: 0.8;}
-            #logo_camp{    display:none;}
-            #logo_evolution{  display:none;}
+        .header-baner{height: 30vh;   width: 100%;}
         
-        .cont-menu{
-            display: flex;  flex-direction: row;
-            align-items: center;    justify-content: center;
-            height: 10vh;   width: 100%;
-            background-color: #902129;}
+        .cont-menu{height: 10vh;}
 
-            .bar-btn {  display: none;}
-            #check{    display: none;}
-            .cont-men-nav{
-                display: flex;  flex-direction: row;
-                justify-content: center;
-                width: 100%;}
-            .cont-men-nav ul{
-                list-style-type: none;  text-align: center; 
-                margin: 2vw;}
+        #logo_camp{    display:none;}
+        #logo_evolution{  display:none;}
+
+        .cont-men-nav{flex-direction: row;}
+        
             .cont-men-nav ul li{
-                display: inline;
                 padding: 1vw 1vw;
                 max-width: 20vw;}
 
-    section{
-        display: flex;  flex-direction: column;
-        background-color: white;
-        width: 100%;}
-
         article{
         display: flex;  flex-direction: row-reverse;
-        width: 100%; height: 48vh;
-        background-image: url(images/Fondo.jpg);
-        margin-top: 1vh;    margin-bottom: 1vh;}
+        height: 48vh;}
+
+        .bar-btn {  display: none;}
+        #check{    display: none;}
         
-        .slider{
-            display: flex;  flex-direction: row;
-            justify-content: center; align-items: center;
-            height: 50vh;}
+        .slider{    height: 50vh;}
 
             .slider_images{
-                display: flex; flex-direction: row;
-                width: 48%; height: 50vh;
-                background-color: black;
-                overflow: hidden;}
+                width: 48%; height: 50vh;}
 
-                .slider_images ul{
-                    display: flex;  flex-direction: column;
-                    width: 100%;
-                    padding: 0;
-                    animation: image_changes 20s infinite alternate;}
-
-                .slider_images ul li{
-                    list-style: none;}
                 .slider_images img{ height: 49.5vh; max-width: 45vw;}
 
                 @keyframes image_changes {
@@ -225,84 +215,25 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                     75% {margin-top: -150vh;}
                     100% {margin-top: -150vh;}}
 
-            .slider_comunidad{
-                        display: flex; flex-direction: row;
-                        justify-content: center;
-                        width: 48%; height: 50vh;
-                        background-color: rgb(177, 55, 55);
-                        overflow: auto;}
+            .slider_comunidad{width: 48%; height: 50vh;}
                     
-                        .slider_comunidad ul{
-                            display: flex;  flex-direction: column;
-                            height: 50vh;
-                            padding: 0;}
+                        .slider_comunidad ul{   height: 50vh;}
                         
-                        .slider_images ul li{
-                                list-style: none;   width: 100%;}
-                        .slider_comunidad ul li iframe{ 
-                            height: 45vh; width: 90%;
-                            margin-top: 5%; margin-left: 5%;}
+                        .slider_comunidad ul li iframe{ height: 45vh;}
 
-        .articulo_cuerpo{
-                display: flex;  flex-direction: column;
-                justify-content: flex-start; align-items: center;
-                background-color: rgba(255,255,255,0.3);
-                width: 60%;
-                padding: 2%;
-                overflow: auto;}
+        .articulo_cuerpo{   width: 60%;}
 
-        .articulo_imagen{
-                display: flex;  flex-direction: column-reverse;
-                align-items: center;    justify-content: center;
-                background-color: black;
-                width: 40%;}
+        .articulo_imagen{   width: 40%;}}
 
-                .articulo_imagen a{height: 90%;}
-
-                #articulo_4 .articulo_imagen{
-                flex-direction: row-reverse;    flex-wrap: wrap;}
-
-                .articulo_imagen img{
-                   height: 90%;     max-width: 80%;}
-                #imagen_velociraptor {display: none;}
-                #imagen_spino {width: 45%;}
-                #imagen_t-rex {width: 45%;}
-    
-    footer{
-        display: flex;  flex-direction: row;
-        justify-content: space-around;  align-items: center;
-        background-color: #902129;
-        width: 100%;}
-
-        footer a{ height: 100%;}
-        footer a img{ width: 10vh; max-width: 15vw;}
-}
 @media screen and (max-width:480px){
     li{font-size: 4hw;}
     h1, h2, h3 {font-size: max(4vh,18px);}
     h4, p {font-size: max(1.5vw, 12px, 2vh);}  
-    
-    #contenedor{    width: 95%;     margin: auto;}
 
-    header{
-        display: flex;  flex-direction: column;
-        width: 100%;}
-
-        .header-baner{
-            display: flex;  flex-direction: row;
-            align-items: center;    justify-content: space-around;
-            background-color: rgb(24, 29, 33);
-            height: 20vh;   width: 100%;}
-
-            #logo_principal{    height: 100%;   opacity: 0.8;}
-            #logo_camp{    display:none;}
-            #logo_evolution{  display:none;}
-        
-        .cont-menu{
-            display: flex;  flex-direction: row;
-            align-items: center;    justify-content: center;
-            height: 100%;   width: 100%;
-            background-color: #902129;}
+        .header-baner{  height: 20vh;   width: 100%;}
+        #logo_camp{    display:none;}
+        #logo_evolution{  display:none;}
+        .cont-menu{     height: 100%;}
 
             .cont-men-nav li a.active, .cont-men-nav li a:hover{
                 color: rgb(236, 168, 168);transition: .2s;}
@@ -312,18 +243,16 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                         margin: 0.5%;   margin-left: 3%;}
 
             #check{  display: none;     margin: 0.5%;   margin-left: 3%;}
-            .cont-men-nav{
-                display: flex;  flex-direction: column;
-                justify-content: center;
-                width: 100%;    height: 0;
-                background-color: #902129;}
-            .cont-men-nav ul{
-                list-style-type: none;
+            
+            .cont-men-nav{    
+                flex-direction: column;
+                height: 0;    background-color: #902129;}
+            
+                .cont-men-nav ul{
                 display: block;
                 line-height: 70%;
                 margin: 5% 0;
-                transition: all 0.5s;
-                text-align: center;}
+                transition: all 0.5s;}
 
             .cont-men-nav ul li{
                 display: block;
@@ -331,38 +260,18 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                 height: 100%;}
             #check:checked ~ .cont-men-nav {height: 100%;}
             #check:checked ~ .cont-men-nav li{display: block;}
-        
-
-    section{
-        display: flex;  flex-direction: column;
-        background-color: white;
-        width: 100%;}
 
         article{
-        display: flex;  flex-direction: column;
-        width: 100%; height: 100vh;
-        background-image: url(images/Fondo.jpg);
-        margin-top: 1vh;    margin-bottom: 1vh;}
+        flex-direction: column;
+        height: 100vh;}
         
         .slider{
-            display: flex;  flex-direction: column;
-            justify-content: center; align-items: center;
+            flex-direction: column;
             height: 100vh;}
 
-            .slider_images{
-                display: flex; flex-direction: column;
-                width: 100%; height: 40vh;
-                background-color: black;
-                overflow: hidden;}
-
-                .slider_images ul{
-                    display: flex;  flex-direction: column;
-                    width: 100%;
-                    padding: 0;
-                    animation: image_changes 20s infinite alternate;}
-
-                .slider_images ul li{
-                    list-style: none;}
+            .slider_images{flex-direction: column;
+                width: 100%; height: 40vh;}
+                
                 .slider_images img{ height: 39.5vh; max-width: 90vw;}
 
                 @keyframes image_changes {
@@ -375,58 +284,20 @@ p{  color: #17171A;    text-align: justify;     padding: 3%;}
                     75% {margin-top: -120vh;}
                     100% {margin-top: -120vh;}}
 
-            .slider_comunidad{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%; height: 40vh;
-                        background-color: rgb(177, 55, 55);
-                        overflow: auto;}
+            .slider_comunidad{width: 100%; height: 40vh;}
 
-                        .slider_comunidad ul{
-                            display: flex;  flex-direction: column;
-                            height: 40vh;
-                            padding: 0;}
+                        .slider_comunidad ul{   height: 40vh;}
                         
-                        .slider_images ul li{
-                                list-style: none;   width: 100%;}
-                        .slider_comunidad ul li iframe{ 
-                            height: 38vh; width: 90%;
-                            margin-top: 5%; margin-left: 5%;}
+                        .slider_comunidad ul li iframe{ height: 38vh;}
 
         .articulo{
             display: flex; flex-direction: column-reverse;
             width: 100%;}
             .articulo_cuerpo{
-                    display: flex;  flex-direction: column;
-                    justify-content: flex-start; align-items: center;
-                    background-color: rgba(255,255,255,0.3);
                     width: 98%; height: 60vh;
-                    padding: 0%;
-                    overflow: auto;}
+                    padding: 0%;}
 
             .articulo_imagen{
-                    display: flex;  flex-direction: column-reverse;
-                    align-items: center;    justify-content: center;
-                    background-color: black;
                     width: 100%; height: 40vh;}
-
-                    .articulo_imagen a{height: 90%;}
-                    #articulo_4 .articulo_imagen{
-                    flex-direction: row-reverse;    flex-wrap: wrap;}
-
-                    .articulo_imagen img{
-                    height: 90%;     max-width: 80%;}
                     #imagen_velociraptor {display: none;}
-                    #imagen_spino {width: 45%;}
-                    #imagen_t-rex {width: 45%;}
-    
-    footer{
-        display: flex;  flex-direction: row;
-        justify-content: space-around;  align-items: center;
-        background-color: #902129;
-        width: 100%;}
-
-        footer a{ height: 100%;}
-        footer a img{ width: 10vh; max-width: 15vw;}
 }
